@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayLigth"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewCount">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrayLigth"
+            android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Debounce with EditText, AutoCompleteTextView and SearchView"
+        android:textSize="22sp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:padding="20dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="15dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_search_24dp"
+        android:hint="Digite sua busca"
+        android:inputType="textPersonName"
+        style="@style/mCustomeAutoCompleteTextView"
+        tools:ignore="MissingConstraints"
+        android:autofillHints="" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        style="@style/mCustomeAutoCompleteTextView"
+        >
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/colorWhite"
+        android:drawableLeft="@drawable/ic_search_24dp"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:elevation="0dp"
+        android:textSize="16dp"
+        android:hint="Digite sua busca"
+        android:textColorHint="@color/colorGray"
+        android:inputType="textAutoComplete"
+        tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorWhite"
+        tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text=""
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
